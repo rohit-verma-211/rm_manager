@@ -47,7 +47,7 @@ def load_and_clean(raw_df: pd.DataFrame) -> None:
 # ----------------------------------------------------------------------
 logo_col, title_col = st.columns([1, 14], vertical_alignment="center")
 with logo_col:
-    st.image("assets/dtu-logo-removebg-preview.png", width=70)
+    st.image("dtu-logo-removebg-preview.png", width=70)
 with title_col:
     st.markdown(
         "<h1 style='margin-bottom:0; padding-top:0.3rem;'>RM Student Data Pipeline &amp; UI</h1>",
