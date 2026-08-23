@@ -45,7 +45,7 @@ def load_and_clean(raw_df: pd.DataFrame) -> None:
 # ----------------------------------------------------------------------
 # Header
 # ----------------------------------------------------------------------
-st.title("🎓 RM Student Data Pipeline & UI")
+st.title(" RM Student Data Pipeline & UI")
 st.caption(
     "Upload a raw student CSV → auto-clean → filter, toggle Active/Debarred "
     "status, and export a live shortlist."
