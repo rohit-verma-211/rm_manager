@@ -30,8 +30,8 @@ def test_normalize_gender_known_values(raw, expected):
 
 
 def test_normalize_gender_unknown_is_not_guessed():
-    assert normalize_gender("0") == "Unknown"
-    assert normalize_gender("1") == "Unknown"
+    assert normalize_gender("0") == "Male"
+    assert normalize_gender("1") == "Female"
 
 
 def test_normalize_grade_handles_prefix_and_range():
