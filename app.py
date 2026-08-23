@@ -19,7 +19,7 @@ from src.cleaning import clean_dataframe
 
 st.set_page_config(
     page_title="RM Student Data Pipeline",
-    page_icon="🎓",
+    page_icon="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDHd6SXW6jl734QeA5J9HW6ZyN6DiSgn6gZ61Z7Kwscw&s=10",
     layout="wide",
 )
 
