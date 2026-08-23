@@ -50,7 +50,7 @@ with logo_col:
     st.image("dtu-logo-removebg-preview.png", width=70)
 with title_col:
     st.markdown(
-        "<h1 style='margin-bottom:0; padding-top:0.3rem;'>RM Student Data Pipeline &amp; UI</h1>",
+        "<h1 style='margin-bottom:0; padding-top:0.3rem;'>RM Student Data</h1>",
         unsafe_allow_html=True,
     )
 st.caption(
@@ -62,8 +62,8 @@ st.caption(
 # 1. Upload
 # ----------------------------------------------------------------------
 with st.sidebar:
-    st.header("1. Upload dataset")
-    uploaded = st.file_uploader("Raw student CSV", type=["csv"])
+    st.header("Upload dataset (* .csv)")
+    uploaded = st.file_uploader("Raw data", type=["csv"])
     use_sample = st.button("Use bundled sample dataset", use_container_width=True)
 
     if uploaded is not None:
@@ -83,7 +83,7 @@ with st.sidebar:
             st.error(f"Could not load sample dataset: {exc}")
 
 if st.session_state.clean_df is None:
-    st.info("⬅️ Upload a CSV or click **Use bundled sample dataset** in the sidebar to begin.")
+    st.info("Upload a CSV or click **Use bundled sample dataset** in the sidebar to begin.")
     st.stop()
 
 clean_df: pd.DataFrame = st.session_state.clean_df
@@ -92,7 +92,7 @@ report = st.session_state.report
 # ----------------------------------------------------------------------
 # 2. Cleaning report
 # ----------------------------------------------------------------------
-with st.expander("🧹 Data cleaning report", expanded=False):
+with st.expander("Data cleaning report", expanded=False):
     st.caption(f"Pipeline ran in **{st.session_state.load_seconds}s**.")
     cols = st.columns(4)
     stats = report.as_dict()
@@ -111,7 +111,7 @@ with st.expander("🧹 Data cleaning report", expanded=False):
 # ----------------------------------------------------------------------
 # 3. Active / Debarred status editor (real-time)
 # ----------------------------------------------------------------------
-st.subheader("2. Student roster — toggle Active / Debarred status")
+st.subheader("Student - Active / Debarred status")
 st.caption("Debarred students are immediately excluded from the shortlist below.")
 
 edited_df = st.data_editor(
@@ -134,7 +134,7 @@ st.session_state.clean_df = edited_df
 # ----------------------------------------------------------------------
 # 4. Live shortlist filter
 # ----------------------------------------------------------------------
-st.subheader("3. Shortlist")
+st.subheader("Shortlisted students")
 
 min_total = int(edited_df["Total"].min()) if len(edited_df) else 0
 max_total = int(edited_df["Total"].max()) if len(edited_df) else 0
@@ -160,7 +160,7 @@ m5.metric("Min Total", int(shortlist["Total"].min()) if len(shortlist) else 0)
 st.dataframe(shortlist, use_container_width=True, hide_index=True)
 
 st.download_button(
-    "⬇️ Export shortlist as CSV",
+    "Export shortlist as CSV",
     data=shortlist.to_csv(index=False).encode("utf-8"),
     file_name="shortlist.csv",
     mime="text/csv",
@@ -168,7 +168,3 @@ st.download_button(
 )
 
 st.divider()
-st.caption(
-    "Built for the DTU CDIE Recruitment Manager (RM) Portal technical assessment. "
-    "See README.md for setup instructions and cleaning logic."
-)
