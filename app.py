@@ -47,7 +47,7 @@ def load_and_clean(raw_df: pd.DataFrame) -> None:
 # ----------------------------------------------------------------------
 logo_col, title_col = st.columns([1, 10], vertical_alignment="center")
 with logo_col:
-    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDHd6SXW6jl734QeA5J9HW6ZyN6DiSgn6gZ61Z7Kwscw&s=10", width=64)
+    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDHd6SXW6jl734QeA5J9HW6ZyN6DiSgn6gZ61Z7Kwscw&s=10", width=32)
 with title_col:
     st.title("RM Student Data Pipeline & UI")
 st.caption(
