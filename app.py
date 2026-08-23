@@ -19,7 +19,7 @@ from src.cleaning import clean_dataframe
 
 st.set_page_config(
     page_title="RM Student Data Pipeline",
-    page_icon="https://kommodo.ai/i/3g8mOsoL708PhEQor6hq",
+    page_icon="dtu-logo-removebg-preview.png",
     layout="wide",
 )
 
@@ -47,7 +47,7 @@ def load_and_clean(raw_df: pd.DataFrame) -> None:
 # ----------------------------------------------------------------------
 logo_col, title_col = st.columns([1, 30], vertical_alignment="center")
 with logo_col:
-    st.image("https://kommodo.ai/i/3g8mOsoL708PhEQor6hq", width=50)
+    st.image("dtu-logo-removebg-preview.png", width=50)
 with title_col:
     st.title("RM Student Data Pipeline & UI")
 st.caption(
