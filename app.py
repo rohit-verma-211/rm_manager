@@ -19,7 +19,7 @@ from src.cleaning import clean_dataframe
 
 st.set_page_config(
     page_title="RM Student Data Pipeline",
-    page_icon="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDHd6SXW6jl734QeA5J9HW6ZyN6DiSgn6gZ61Z7Kwscw&s=10",
+    page_icon="blob:https://claude.ai/d8c90762-8086-4261-8115-729defa8b4f3",
     layout="wide",
 )
 
@@ -47,7 +47,7 @@ def load_and_clean(raw_df: pd.DataFrame) -> None:
 # ----------------------------------------------------------------------
 logo_col, title_col = st.columns([1, 30], vertical_alignment="center")
 with logo_col:
-    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDHd6SXW6jl734QeA5J9HW6ZyN6DiSgn6gZ61Z7Kwscw&s=10", width=50)
+    st.image("blob:https://claude.ai/d8c90762-8086-4261-8115-729defa8b4f3", width=50)
 with title_col:
     st.title("RM Student Data Pipeline & UI")
 st.caption(
