@@ -4,7 +4,7 @@ A data-cleaning pipeline + Streamlit UI built for the DTU **Career Development a
 Industry Engagement (CDIE) Office** Recruitment Manager (RM) Portal technical
 assessment.
 
-**Live demo:** _add your deployed Streamlit Cloud URL here_
+**Live demo:** [app](https://rm-manager.streamlit.app/)
 **Video walkthrough (≤90s):** _add your video link here (Loom / YouTube unlisted / Drive)_
 
 ---
