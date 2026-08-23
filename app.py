@@ -45,11 +45,14 @@ def load_and_clean(raw_df: pd.DataFrame) -> None:
 # ----------------------------------------------------------------------
 # Header
 # ----------------------------------------------------------------------
-logo_col, title_col = st.columns([1, 30], vertical_alignment="center")
+logo_col, title_col = st.columns([1, 14], vertical_alignment="center")
 with logo_col:
-    st.image("dtu-logo-removebg-preview.png", width=50)
+    st.image("assets/dtu-logo-removebg-preview.png", width=70)
 with title_col:
-    st.title("RM Student Data Pipeline & UI")
+    st.markdown(
+        "<h1 style='margin-bottom:0; padding-top:0.3rem;'>RM Student Data Pipeline &amp; UI</h1>",
+        unsafe_allow_html=True,
+    )
 st.caption(
     "Upload a raw student CSV → auto-clean → filter, toggle Active/Debarred "
     "status, and export a live shortlist."
